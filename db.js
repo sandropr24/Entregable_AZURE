@@ -1,0 +1,1 @@
+// db.js - Conexión aùn en desarrollo
