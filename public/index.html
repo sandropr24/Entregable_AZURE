@@ -3,14 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STOREFINAL | Asistente virtual</title>
+    <meta name="description" content="InnovVentas: tecnología y asistencia inteligente para consultar productos, características y métodos de pago.">
+    <title>InnovVentas | Tecnología y atención inteligente</title>
     <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
 </head>
 <body>
+    <header class="site-header">
+        <div class="contenedor navegacion">
+            <a class="logo" href="/" aria-label="InnovVentas, inicio">
+                <span class="logo-icono" aria-hidden="true">IV</span>
+                <span>Innov<span class="logo-acento">Ventas</span></span>
+            </a>
+            <span class="nav-etiqueta"><span class="estado-punto" aria-hidden="true"></span> Asistencia inteligente</span>
+        </div>
+    </header>
+
     <main class="pagina">
-        <h1>STOREFINAL</h1>
-        <p>Tu tienda de tecnología. ¿Necesitas ayuda para elegir?</p>
+        <section class="hero">
+            <div class="contenedor hero-grid">
+                <div class="hero-contenido">
+                    <span class="hero-etiqueta">INNOVACIÓN EN CADA COMPRA</span>
+                    <h1>La tecnología que buscas, con la <span>orientación que necesitas.</span></h1>
+                    <p>En InnovVentas te ayudamos a resolver dudas sobre productos electrónicos, características técnicas, disponibilidad y formas de pago, de manera sencilla.</p>
+                    <div class="hero-detalles">
+                        <span>✓ Información de productos</span>
+                        <span>✓ Asistencia con inteligencia artificial</span>
+                    </div>
+                    <p class="hero-ayuda">¿Tienes alguna consulta? Abre el asistente virtual de la esquina inferior derecha.</p>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="visual-glow"></div>
+                    <div class="visual-monitor"><div class="monitor-pantalla"><div class="monitor-cabecera"><i></i><i></i><i></i></div><div class="monitor-contenido"><span class="monitor-bloque grande"></span><span class="monitor-bloque"></span><span class="monitor-bloque corto"></span><div class="monitor-tarjetas"><b></b><b></b><b></b></div></div></div><div class="monitor-base"></div></div>
+                    <div class="visual-tarjeta tarjeta-superior"><span class="tarjeta-simbolo">✓</span> Atención más ágil</div>
+                    <div class="visual-tarjeta tarjeta-inferior"><span class="tarjeta-simbolo">✦</span> Asistente con IA</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicios contenedor" aria-labelledby="servicios-titulo">
+            <div class="seccion-encabezado">
+                <span class="seccion-etiqueta">UNA EXPERIENCIA MÁS SIMPLE</span>
+                <h2 id="servicios-titulo">Resuelve tus dudas antes de comprar</h2>
+                <p>Nuestro asistente está diseñado para acompañarte en las consultas más frecuentes de una tienda tecnológica.</p>
+            </div>
+            <div class="servicios-grid">
+                <article class="servicio">
+                    <span class="servicio-icono" aria-hidden="true">⌕</span>
+                    <h3>Encuentra productos</h3>
+                    <p>Pregunta por categorías, marcas, modelos, precios y disponibilidad de artículos electrónicos.</p>
+                </article>
+                <article class="servicio">
+                    <span class="servicio-icono" aria-hidden="true">▤</span>
+                    <h3>Conoce los detalles</h3>
+                    <p>Solicita información y especificaciones técnicas para comparar mejor tus opciones.</p>
+                </article>
+                <article class="servicio">
+                    <span class="servicio-icono" aria-hidden="true">▣</span>
+                    <h3>Compra con confianza</h3>
+                    <p>Consulta los pasos de compra y los métodos de pago contemplados por la tienda.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="ayuda-seccion">
+            <div class="contenedor ayuda-contenido">
+                <div>
+                    <span class="seccion-etiqueta">ATENCIÓN AL CLIENTE</span>
+                    <h2>¿Una duda está deteniendo tu compra?</h2>
+                    <p>Evita buscar respuestas por tu cuenta. Nuestro asistente virtual puede orientarte sobre productos y el proceso de compra.</p>
+                </div>
+                <div class="ayuda-indicacion"><span aria-hidden="true">↘</span> Encuentra el robotito en la esquina inferior derecha</div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="contenedor footer-contenido">
+            <strong>InnovVentas</strong>
+            <span>Asistencia virtual para productos tecnológicos</span>
+        </div>
+    </footer>
 
     <div class="asistente">
         <section class="chat oculto" id="ventana-chat">

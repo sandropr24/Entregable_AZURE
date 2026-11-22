@@ -4,6 +4,8 @@ const entrada = document.getElementById("mensaje");
 const mensajes = document.getElementById("mensajes");
 const enviar = document.getElementById("enviar");
 
+let chatId = null;
+
 function agregarMensaje(texto, tipo) {
     const elemento = document.createElement("div");
     elemento.className = `mensaje ${tipo}`;
@@ -43,7 +45,10 @@ formulario.addEventListener("submit", async (evento) => {
     try {
         const respuesta = await fetch("/api/chat", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: {
+                "Content-Type": "application/json",
+                ...(chatId ? { "X-Chat-Id": chatId } : {})
+            },
             body: JSON.stringify({ mensaje })
         });
 
@@ -52,6 +57,7 @@ formulario.addEventListener("submit", async (evento) => {
         }
 
         const datos = await respuesta.json();
+        chatId = datos.chatId ?? null;
 
         espera.remove();
         agregarMensaje(datos.respuesta || "No pude generar una respuesta.", "bot");

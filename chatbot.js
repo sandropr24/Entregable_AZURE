@@ -46,7 +46,8 @@ INFORMACIÓN SOBRE COMPRAS:
 ${JSON.stringify(PROCESO_COMPRA)}
 `;
 
-export async function preguntar(mensaje) {
+
+export async function preguntar(mensaje, historial = []) {
     const texto = mensaje.normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
         .toLowerCase();
@@ -57,12 +58,18 @@ export async function preguntar(mensaje) {
         return "Lo siento, has utilizado un término inadecuado. ¿Puedo ayudarte con algún producto de STOREFINAL?";
     }
 
+    const conversacion = [
+        ...historial.slice(-10),
+        { role: "user", content: mensaje }
+    ];
+
     const respuesta = await openai.responses.create({
         model: CONFIG.deploymentName,
         instructions: INSTRUCCIONES,
-        input: mensaje,
+        input: conversacion,
         max_output_tokens: 500
     });
 
     return respuesta.output_text || "No pude generar una respuesta.";
 }
+
