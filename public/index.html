@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOREFINAL | Asistente virtual</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <main class="pagina">
+        <h1>STOREFINAL</h1>
+        <p>Tu tienda de tecnología. ¿Necesitas ayuda para elegir?</p>
+    </main>
+
+    <div class="asistente">
+        <section class="chat oculto" id="ventana-chat">
+            <div class="chat-header">
+                <div>
+                    <strong>STOREFINAL Bot</strong>
+                    <small>Asistente virtual con IA</small>
+                </div>
+                <button type="button" id="cerrar-chat" aria-label="Cerrar chat">×</button>
+            </div>
+
+            <div class="mensajes" id="mensajes" aria-live="polite"></div>
+
+            <form class="chat-form" id="form-chat">
+                <input id="mensaje" type="text" placeholder="Escribe tu pregunta..." maxlength="500" required>
+                <button type="submit" id="enviar">Enviar</button>
+            </form>
+        </section>
+
+        <button type="button" class="robot" id="robot" aria-label="Abrir chat" aria-expanded="false">
+            <span class="antena"></span>
+            <span class="cabeza">
+                <span class="pantalla">
+                    <span class="ojos">
+                        <span class="ojo"></span>
+                        <span class="ojo"></span>
+                    </span>
+                    <span class="boca"></span>
+                </span>
+            </span>
+            <span class="cuerpo"></span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@17/lib/marked.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+    <script src="/js/robot.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
